@@ -59,8 +59,8 @@ jobs:
       - name: Set up Android SDK
         uses: android-actions/setup-android@v4
         with:
-          api-level: 31
-          build-tools: 31.0.0
+          api-level: 34
+          build-tools: 34.0.0
 
       # Bước 5: Xây dựng ứng dụng Android
       - name: Build Android app (Ubuntu)
