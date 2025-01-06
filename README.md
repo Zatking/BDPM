@@ -48,3 +48,53 @@ Join our community of developers creating universal apps.
 
 - [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
 - [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+Topic-branch Creating Rules
+Topic-branch luôn phải được tạo ra từ nhánh main
+git checkout main - chuyển sang nhánh main
+git pull - cập nhật các thay đổi mới nhất của main về local
+git checkout -b <topic-branch-name> - tạo nhánh mới từ main
+Trước khi push topic-branch lên repo, luôn phải chắc chắn
+phiên bản hiện tại là phiên bản mới nhất trên main (up-todate)
+git pull origin main - cập nhật các thay đổi mới
+nhất của main về local
+git push - đưa branch lên repository
+Mục đích của việc này là xử lý kịp thời khi có conflict và tránh việc mất code của người khác do quá trình merge và ghi đè khi merge không chính xác
+Naming Rules
+1. Topic-branch naming rules:
+<type>/#<issue_number>_<issue_title_in_english>
+Trong đó:
+type :
+feature - tính năng mới
+modify - chỉnh sửa tính năng/logic đã có sẵn
+fix - sửa lỗi
+hotfix - sửa các lỗi cần gấp trực tiếp trên production
+revert - revert lại các commit trước
+issue_number : number của task ở trên jira/trello, bắt đầu bằng dấu #
+issue_title_in_english : title trên jira/trello (dịch sang tiếng anh)
+Example: feature/#100_change_base_url_and_redirection
+fix/#100_fix_overload_query
+(*Ն Đối với sub-topic-branch ՅXử lý subtask cần tách nhánh con
+ra từ topic-branch): <type>/#
+<issue_number>_**subtask**_<**subtask_title**_in_english>
+Example: feature/#100_subtask_add_redirection
+feature/#100Շ1]subtask_add_redirection
+feature/#100Շ2]subtaskadd_redirection
+feature/#100Շ3]subtask_add_redirection
+⇒ feature/#100_subtask_add_redirection ⇒ develop
+2. Commit naming rules:
+<typeՂҡ <changed content>
+issue_title_in_english : title trên jira/trello (dịch sang
+tiếng anh)
+buildց Thay đổi liên quan đến hệ thống build hoặc công cụ.
+ciց Cài đặt hoặc chỉnh sửa cấu hình CI và script liên quan.
+docsց Cập nhật hoặc thêm document.
+featց Thêm chức năng mới.
+fixց Những commit fixbug.
+perfց Tối ưu hiệu suất mà không thay feature hiện tại của app
+refactorց Tái cấu trúc code, không sửa lỗi hoặc thêm chức
+năng mới.
+revert: revert một hoặc nhiều commit trước đó.
+styleց Chỉnh sửa định dạng hoặc phong cách code, không
+ảnh hưởng logic.
+testց Thêm unit test
+Example:"feat: driver apply to recruit" "perf: optimize get entries query"
