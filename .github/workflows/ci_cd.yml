@@ -20,7 +20,7 @@ jobs:
         - name: Setup Node.js
           uses: actions/setup-node@v4
           with:
-            node-version: '16' # Điều chỉnh phiên bản Node.js theo dự án
+            node-version: '21' # Điều chỉnh phiên bản Node.js theo dự án
     
         # Bước 3: Cài đặt dependencies
         - name: Install dependencies
@@ -40,7 +40,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '18' # Sử dụng Node.js mới nhất phù hợp với React Native
+          node-version: '21' # Sử dụng Node.js mới nhất phù hợp với React Native
 
       - name: Install dependencies
         run: npm install
