@@ -48,8 +48,10 @@ Join our community of developers creating universal apps.
 
 - [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
 - [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+  
 Topic-branch Creating Rules
 Topic-branch luôn phải được tạo ra từ nhánh main
+
 git checkout main - chuyển sang nhánh main
 git pull - cập nhật các thay đổi mới nhất của main về local
 git checkout -b <topic-branch-name> - tạo nhánh mới từ main
