@@ -71,19 +71,15 @@ jobs:
           --device model=Pixel3,version=30,locale=en,orientation=portrait \
           --timeout 15m \
           --results-dir=results
+    # Bước 9: Tải kết quả kiểm thử
 
-    # Bước 9: Tải kết quả kiểm thử Firebase
     - name: Upload Firebase Test Lab results
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v3
       with:
-        name: firebase-test-results
-        path: results/
-    # Bước 10: Tải APK artifact
-    - name: Upload Android APK artifact
-      uses: actions/upload-artifact@v2
-      with:
-        name: android-build
-        path: android/app/build/outputs/apk/release/app-release.apk 
+            name: firebase-test-results
+            path: results/
+        
+  
    
    
   # Job 2: Build iOS App
