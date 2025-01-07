@@ -3,9 +3,15 @@ name: Flutter CI
 
 on:
   push:
-    branches: [ main ]
+    branches: 
+      - main
+      - develop
+      - staging 
   pull_request:
-    branches: [ main ]
+    branches:
+      - main
+      - develop
+      - staging 
 
 jobs:
   test:
